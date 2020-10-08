@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Я дома</title>
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(56070517, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <!-- /Yandex.Metrika counter -->
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1940245289455446');
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- VK pixel code -->
+    <script type="text/javascript">
+        !function(){var t=document.createElement("script");
+        t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?168",t.onload=function(){
+        VK.Retargeting.Init("VK-RTRG-505445-aTKiM"),VK.Retargeting.Hit()},document.head.appendChild(t)}();
+    </script>
+    <!-- End VK pixel code -->
+
+    <!-- Rating Mail.ru counter -->
+    <script type="text/javascript">
+    var _tmr = window._tmr || (window._tmr = []);
+    _tmr.push({id: "3190575", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
+    (function (d, w, id) {
+      if (d.getElementById(id)) return;
+      var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+      ts.src = "https://top-fwz1.mail.ru/js/code.js";
+      var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+      if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+    })(document, window, "topmailru-code");
+    </script><noscript><div>
+    <img src="https://top-fwz1.mail.ru/counter?id=3190575;js=na" style="border:0;position:absolute;left:-9999px;" alt="Top.Mail.Ru" />
+    </div></noscript>
+    <!-- //Rating Mail.ru counter -->
+</head>
+<body>
+    <!-- Yandex.Metrika counter -->
+    <noscript><div><img src="https://mc.yandex.ru/watch/56070517" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <!-- Facebook Pixel Code -->
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1940245289455446&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- VK pixel code -->
+    <noscript><img src="https://vk.com/rtrg?p=VK-RTRG-505445-aTKiM" style="position:fixed; left:-999px;" alt=""/></noscript>
+    <!-- End VK pixel code -->
+
+    <!-- Rating Mail.ru pixel code -->
+    <noscript><img src="https://top-fwz1.mail.ru/tracker?id=3190575;e=RG%3A/trg-pixel-7321219-1600167298520;_={{random}}" style="position:fixed; left:-999px;" alt=""/></noscript>
+    <!-- //Rating Mail.ru pixel code -->
+
+    <div class="quiz">
+        <div class="quiz__wrap">
+            <div class="quiz__content">
+                <div class="quiz__header">
+                    <p class="quiz__header-text">Подберем новостройки под Ваши критерии</p>
+                </div>
+                <form action="send.php" method="POST" class="quiz__form">
+
+                    <input name="utm_source" type="hidden">
+                    <input name="utm_medium" type="hidden">
+                    <input name="utm_campaign" type="hidden">
+                    <input name="utm_content" type="hidden">
+                    <input name="utm_term" type="hidden">
+
+                    <!-- -----------Выберите район----------- -->
+
+                    <div class="quiz__form-step quiz__form-step--active">
+                        <h2 class="quiz__form-step-title">Выберите район на карте:</h2>
+                        <div class="quiz__form-step-attention">выберите один или несколько</div>
+
+                        <div class="quiz__form-step-content">
+                            <div class="quiz__form-step-content-col quiz__form-step-content-col--map scrollbar-inner">
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_area[1]" value="Сектор 1" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Сектор 1</div>
+                                </label>
+
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_area[2]" value="Сектор 2"  class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Сектор 2</div>
+                                </label>
+
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_area[3]" value="Сектор 3"  class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Сектор 3</div>
+                                </label>
+
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_area[4]" value="Сектор 4"  class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Сектор 4</div>
+                                </label>
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_area[5]" value="Сектор 5"  class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Сектор 5</div>
+                                </label>
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_area[6]" value="Сектор 6"  class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Сектор 6</div>
+                                </label>
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_area[7]" value="Сектор 7"  class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Сектор 7</div>
+                                </label>
+                            </div>
+
+                            <div class="quiz__form-step-content-col quiz__form-step-content-col--map-image">
+                                <div class="quiz__form-map">
+                                    <img src="img/quiz-map.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ------------------------- -->
+
+
+                    <!-- -------------Срок сдачи------------- -->
+                    <div class="quiz__form-step">
+                        <h2 class="quiz__form-step-title">Срок сдачи:</h2>
+                        <div class="quiz__form-step-attention">выберите один или несколько</div>
+
+                        <div class="quiz__form-step-content">
+                            <div class="quiz__form-step-content-col">
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_ending_date[1]" value="В течение 2020 года" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">В течение 2020 года</div>
+                                </label>
+
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_ending_date[2]" value="В течение 2021 года" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">В течение 2021 года</div>
+                                </label>
+
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_ending_date[3]" value="Рассматриваю поздние сроки" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Рассматриваю поздние сроки</div>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- -------------------------- -->
+
+
+                    <!-- ------------Количество комнат-------------- -->
+                    <div class="quiz__form-step">
+                        <h2 class="quiz__form-step-title">Количество комнат:</h2>
+                        <div class="quiz__form-step-attention">выберите один или несколько</div>
+
+                        <div class="quiz__form-step-content">
+                            <div class="quiz__form-step-content-col">
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_apartment_sizes[1]" value="Студия" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Студия</div>
+                                </label>
+
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_apartment_sizes[2]" value="Однушка" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Однушка</div>
+                                </label>
+
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_apartment_sizes[3]" value="Двушка" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Двушка</div>
+                                </label>
+
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_apartment_sizes[4]" value="Трёшка" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Трёшка</div>
+                                </label>
+                            </div>
+
+                            <div class="quiz__form-step-content-col">
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_apartment_sizes[5]" value="Много комнат" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Много комнат</div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- -------------------------- -->
+
+
+                    <!-- -------------Отделка------------- -->
+                    <div class="quiz__form-step">
+                        <h2 class="quiz__form-step-title">Отделка:</h2>
+                        <div class="quiz__form-step-attention">выберите один или несколько</div>
+
+                        <div class="quiz__form-step-content">
+                            <div class="quiz__form-step-content-col">
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_finishing[1]" value="Без отделки" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Без отделки</div>
+                                </label>
+
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_finishing[2]" value="Подчистовая" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Подчистовая</div>
+                                </label>
+                            </div>
+
+                            <div class="quiz__form-step-content-col">
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_finishing[3]" value="Чистовая" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Чистовая</div>
+                                </label>
+
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_finishing[4]" value="Не имеет значения" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Не имеет значения</div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- -------------------------- -->
+
+
+                    <!-- ------------Стоимость-------------- -->
+                    <div class="quiz__form-step">
+                        <h2 class="quiz__form-step-title">Стоимость, руб.:</h2>
+                        <div class="quiz__form-step-attention">выберите один или несколько</div>
+
+                        <div class="quiz__form-step-content">
+                            <div class="quiz__form-step-content-col">
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_prices[1]" value="2-4 млн" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">2-4 млн.</div>
+                                </label>
+
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_prices[2]" value="4-7 млн" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">4-7 млн</div>
+                                </label>
+
+                            </div>
+
+                            <div class="quiz__form-step-content-col">
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_prices[3]" value="7-15 млн" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">7-15 млн</div>
+                                </label>
+
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_prices[4]" value="Не имеет значения" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Не имеет значения</div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- -------------------------- -->
+
+                    <!-- -------------Как будете покупать------------- -->
+                    <div class="quiz__form-step">
+                        <h2 class="quiz__form-step-title">Как будете покупать?</h2>
+                        <div class="quiz__form-step-attention">выберите один или несколько</div>
+
+                        <div class="quiz__form-step-content">
+                            <div class="quiz__form-step-content-col">
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_buy_method[1]" value="Ипотека с первым взносом" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Ипотека с первым взносом</div>
+                                </label>
+
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_buy_method[2]" value="100% наличные" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">100% наличные</div>
+                                </label>
+
+                            </div>
+
+                            <div class="quiz__form-step-content-col">
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_buy_method[3]" value="Рассрочка от застройщика" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Рассрочка от застройщика</div>
+                                </label>
+
+                                <!-- <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_buy_method[4]" value="Денег нет, но я хочу" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Денег нет, но я хочу</div>
+                                </label> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- -------------------------- -->
+
+                    <!-- -------------Вам доступны варианты------------- -->
+                    <div class="quiz__form-step">
+                        <div class="quiz__form-progress">
+                            <p class="quiz__form-progress-text">100%</p>
+
+                            <div class="quiz__form-progress-bar">
+                                <div class="quiz__form-progress-bar-item"></div>
+                                <div class="quiz__form-progress-bar-item"></div>
+                                <div class="quiz__form-progress-bar-item"></div>
+                                <div class="quiz__form-progress-bar-item"></div>
+                                <div class="quiz__form-progress-bar-item"></div>
+                                <div class="quiz__form-progress-bar-item"></div>
+                            </div>
+                        </div>
+                        <div class="quiz__form-row">
+                            <p class="quiz__form-row-text">
+                                Вам доступно: 24 варианта
+                            </p>
+                            <a href="javascript:;" class="quiz__form-row-btn js-next">
+                                Получить подборку
+                            </a>
+                        </div>
+                    </div>
+                    <!-- -------------------------- -->
+
+                    <!-- -------------Форма------------- -->
+                    <div class="quiz__form-step">
+                        
+
+                        <div class="quiz__form-row">
+                            <div class="quiz__form-row-block">
+                                <label class="quiz__form-label">
+                                    <input type="text" name="name" class="quiz__form-input" placeholder="Имя" required>
+                                    
+                                </label>
+                                <label class="quiz__form-label">
+                                    <input type="tel" name="tel" id="client_phone" class="quiz__form-input" placeholder="Телефон" required>
+                                    
+                                </label>
+                                <label class="quiz__form-label">
+                                    <input type="email" name="email" class="quiz__form-input" placeholder="Почта" required>
+                                    
+                                </label>
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="privacy_policy"
+                                           class="quiz__form-checkbox"
+                                           checked required>
+                                    <div class="quiz__form-checkbox-text" id="privacy_policy-text">
+                                        Я прочитал(-a) и согласен(-на) с
+                                        <a target="_blank" rel="noopener noreferrer"
+                                           href="https://yadoma-spb.ru/privacy-policy">
+                                            политикой конфиденциальности
+                                        </a>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="quiz__form-row-block">
+                                <p class="quiz__form-row-text">
+                                    Выберите предпочтительный способ получения подборки:
+                                </p>
+                                <input type="hidden" name="communication_method">
+                                <button type="submit" class="quiz__form-row-btn quiz__form-row-btn--email"
+                                        onclick="submit_with_communication_method('Email')">
+                                    <svg width="22" height="16">
+                                        <use xlink:href="img/icons/sprite.svg#quiz-email"></use>
+                                    </svg>
+                                    Получить по Email
+                                </button>
+
+                                <button type="submit" class="quiz__form-row-btn quiz__form-row-btn--whatsapp"
+                                        onclick="submit_with_communication_method('WhatsApp')">
+                                    <svg width="22" height="22">
+                                        <use xlink:href="img/icons/sprite.svg#quiz-whatsapp"></use>
+                                    </svg>
+                                    Получить по WhatsApp
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- -------------------------- -->
+                </form>
+                <div class="quiz__footer">
+                    <div class="quiz__footer-progress">
+                        <p class="quiz__footer-progress-text">Готово <span>0%</span></p>
+
+                        <div class="quiz__footer-progress-bar">
+                            <div class="quiz__footer-progress-bar-item"></div>
+                            <div class="quiz__footer-progress-bar-item"></div>
+                            <div class="quiz__footer-progress-bar-item"></div>
+                            <div class="quiz__footer-progress-bar-item"></div>
+                            <div class="quiz__footer-progress-bar-item"></div>
+                            <div class="quiz__footer-progress-bar-item"></div>
+                        </div>
+                    </div>
+
+                    <div class="quiz__footer-btns">
+                        <a href="javascript:;" class="quiz__footer-prev js-prev">
+                            <svg width="18" height="12">
+                                <use xlink:href="img/icons/sprite.svg#quiz-prev"></use>
+                            </svg>
+                        </a>
+                        <a href="javascript:;" class="quiz__footer-next js-next">
+                            Далее
+                            <svg width="18" height="12">
+                                <use xlink:href="img/icons/sprite.svg#quiz-next"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="quiz__sidebar">
+                <a href="javascript:;" class="quiz__logo">
+                    <svg>
+                        <use xlink:href="img/icons/sprite.svg#header-logo"></use>
+                    </svg>
+                </a>
+                <a href="tel:+78124253805" class="quiz__help" id="support_href">
+                    <div class="quiz__help-icon">
+                        <svg>
+                            <use xlink:href="img/icons/sprite.svg#help-icon"></use>
+                        </svg>
+                    </div>
+                    <div class="quiz__help-text">
+                        <p><strong>яДОМА</strong></p>
+                        <p>Отдел поддержки клиентов</p>
+                    </div>
+                    
+                </a>
+
+                <p class="quiz__help-number">+7 (812) 425-38-05</p>
+            </div>
+        </div>
+
+        <div class="quiz__bottom">
+            <a href="javascript:;" class="quiz__bottom-logo">
+                <svg>
+                    <use xlink:href="img/icons/sprite.svg#header-logo"></use>
+                </svg>
+                Сервис подбора новостроек
+            </a>
+            <div class="quiz__bottom-row">
+                <div class="quiz__bottom-row-item">
+                    <div class="quiz__bottom-row-item-icon">
+                        <p>1</p>
+                        <img src="img/icons/quiz1.png" alt="">
+                    </div>
+                    <p>
+                        Подберем квартиру в новостройке
+                    </p>
+                    <div class="quiz__bottom-row-item-label">
+                        Бесплатно
+                    </div>
+                </div>
+
+                <div class="quiz__bottom-row-item">
+                    <div class="quiz__bottom-row-item-icon">
+                        <p>2</p>
+                        <img src="img/icons/quiz2.png" alt="">
+                    </div>
+                    <p>
+                        Выберем и согласуем удобную форму оплаты квартиры
+                    </p>
+                    <div class="quiz__bottom-row-item-label">
+                        Бесплатно
+                    </div>
+                </div>
+
+                <div class="quiz__bottom-row-item">
+                    <div class="quiz__bottom-row-item-icon">
+                        <p>3</p>
+                        <img src="img/icons/quiz3.png" alt="">
+                    </div>
+                    <p>
+                        Организуем выезд на интересующие объекты
+                    </p>
+                    <div class="quiz__bottom-row-item-label">
+                        Бесплатно
+                    </div>
+                </div>
+
+                <div class="quiz__bottom-row-item">
+                    <div class="quiz__bottom-row-item-icon">
+                        <p>4</p>
+                        <img src="img/icons/quiz4.png" alt="">
+                    </div>
+                    <p>
+                        Проконтролируем заключение договора с застройщиком
+                    </p>
+                    <div class="quiz__bottom-row-item-label">
+                        Бесплатно
+                    </div>
+                </div>
+
+                <div class="quiz__bottom-row-item">
+                    <div class="quiz__bottom-row-item-icon">
+                        <p>5</p>
+                        <img src="img/icons/quiz5.png" alt="">
+                    </div>
+                    <p>
+                        Поможем на всех этапах приемки квартиры и получении ключей
+                    </p>
+                    <div class="quiz__bottom-row-item-label">
+                        В подарок
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="js/jquery.inputmask.min.js"></script>
+    <script src="js/libs.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/utm-common.js"></script>
+    <script src="js/utm-load.js"></script>
+</body>
+</html>
